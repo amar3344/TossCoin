@@ -1,0 +1,102 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-container {
+  width: 450px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(to right, #f9d423, #e2a139);
+}
+
+@media (min-width: 768px) {
+  .bg-container {
+    width: 700px;
+  }
+}
+
+.toss-container {
+  width: 350px;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .toss-container {
+    width: 400px;
+  }
+}
+
+.heading {
+  font-size: 35px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #a35200;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 40px;
+  }
+}
+
+.tag-line {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #334155;
+}
+
+@media (min-width: 768px) {
+  .tag-line {
+    font-size: 30px;
+  }
+}
+
+.toss-image {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .toss-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #e2a139;
+  font-size: 15px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: #a35200;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.total-heads-tails {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #475569;
+}
