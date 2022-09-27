@@ -14,7 +14,7 @@ class CoinToss extends Component {
   }
 
   getCoinToss = () => {
-    const {activeHeadImage, total, heads, tails} = this.state
+    const {activeHeadImage} = this.state
     const tossResult = Math.floor(Math.random() * 2)
     this.setState(prevState => ({
       total: prevState.total + 1,
@@ -23,17 +23,17 @@ class CoinToss extends Component {
       this.setState(prevState => ({
         tails: prevState.tails + 1,
       }))
-      this.setState({activeHeadImage: !activeHeadImage})
+      this.setState({activeHeadImage: false})
     } else {
       this.setState(prevState => ({
         heads: prevState.heads + 1,
       }))
-      this.setState({activeHeadImage: !activeHeadImage})
+      this.setState({activeHeadImage: true})
     }
   }
 
   render() {
-    const {total, heads, tails, activeHeadImage} = this.state
+    const {total, heads, tails} = this.state
     const tossImage = this.getImage()
 
     return (
@@ -48,9 +48,11 @@ class CoinToss extends Component {
             <button type="button" className="button" onClick={this.getCoinToss}>
               Toss Coin
             </button>
-            <p className="total-heads-tails">Total: {total}</p>
-            <p className="total-heads-tails">Heads: {heads}</p>
-            <p className="total-heads-tails">Tails: {tails}</p>
+            <div className="results-container">
+              <p className="total-heads-tails">Total: {total}</p>
+              <p className="total-heads-tails">Heads: {heads}</p>
+              <p className="total-heads-tails">Tails: {tails}</p>
+            </div>
           </div>
         </div>
       </div>
