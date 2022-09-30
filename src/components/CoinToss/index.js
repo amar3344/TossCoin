@@ -14,12 +14,11 @@ class CoinToss extends Component {
   }
 
   getCoinToss = () => {
-    const {activeHeadImage} = this.state
     const tossResult = Math.floor(Math.random() * 2)
     this.setState(prevState => ({
       total: prevState.total + 1,
     }))
-    if (tossResult === 0) {
+    if (tossResult === 1) {
       this.setState(prevState => ({
         tails: prevState.tails + 1,
       }))
